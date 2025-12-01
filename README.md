@@ -1,6 +1,6 @@
 # Risk Policy Scoring form
 
-A shiny app survey produced for the purposes of completing the risk policy scoring by the PDT. Factor scores from the PDT will be combined with the [New England Fishery Management Council's (NEFMC) weightings](https://github.com/AngeliaMiller/nefmc-risk-weighting) to apply the Council's Risk Policy in their decision making. 
+A shiny app survey produced for the purposes of completing the risk policy factor scoring determined by the Plan Development Teams (PDTs) of the respective fishery management plans (FMPs). Factor scores from the PDT will be combined with the [factor weightings](https://github.com/AngeliaMiller/nefmc-risk-weighting) selected by the voting members of the New England Fishery Management Council (NEFMC) to apply the Council's Risk Policy in their decision making. 
 
 The app was developed using the [surveydown R package](https://github.com/surveydown-dev/surveydown).
 
