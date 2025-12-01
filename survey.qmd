@@ -48,10 +48,11 @@ sd_question(
 sd_question("stock")
 ```
 
+--- biomass_page
 ### Biomass and Stock Status - Current Productivity 
 Move the slider to select the factor score based on the rubric underneath.
 
-```{r}
+```{r biomass}
 sd_question(
   type = "slider_numeric",
   id = "biomass",
@@ -61,12 +62,17 @@ sd_question(
 
 ```
 
-![](images/stock-status-rubric.png){fig-alt="The biomass and stock status rubric" width=25%}
+![](images/stock-status-rubric.png){fig-alt="The biomass and stock status rubric" width=75%}
 
+```{r}
+sd_nav(show_previous = TRUE)
+```
+
+--- recruit_page 
 ### Recruitment - Future Productivity 
 Move the slider to select the factor score based on the rubric underneath.
 
-```{r}
+```{r recruitment}
 sd_question(
   type = "slider_numeric",
   id = "recruitment",
@@ -75,12 +81,16 @@ sd_question(
 )
 ```
 
-![](images/recruitment-rubric.png){fig-alt="The recruitment rubric" width=25%}
+![](images/recruitment-rubric.png){fig-alt="The recruitment rubric" width=75%}
+
+```{r}
+sd_nav(show_previous = TRUE)
+```
 
 ### Assessment Uncertainty 
 Move the slider to select the factor score based on the rubric underneath.
 
-```{r}
+```{r assessment}
 sd_question(
   type = "slider_numeric",
   id = "assessment",
@@ -89,7 +99,11 @@ sd_question(
 )
 ```
 
-![](images/assessment-rubric.png){fig-alt="The assessment uncertainty rubric" width=25%}
+![](images/assessment-rubric.png){fig-alt="The assessment uncertainty rubric" width=75%}
+
+```{r}
+sd_nav(show_previous = TRUE)
+```
 
 ### Climate vulnerability
 Move the slider to select the factor score based on the rubric underneath.
@@ -103,12 +117,18 @@ sd_question(
 )
 ```
 
-![](images/climate-rubric.png){fig-alt="The climate vulnerability rubric" width=25%}
+![](images/climate-rubric.png){fig-alt="The climate vulnerability rubric" width=75%}
 
+```{r}
+sd_nav(show_previous = TRUE)
+```
+
+
+--- fish_condition_page
 ### Fish Condition
 Move the slider to select the factor score based on the rubric underneath.
 
-```{r}
+```{r fish_condition}
 sd_question(
   type = "slider_numeric",
   id = "fish_condition",
@@ -117,13 +137,13 @@ sd_question(
 )
 ```
 
-![](images/fish-condition-rubric.png){fig-alt="The fish condition rubric" width=25%}
+![](images/fish-condition-rubric.png){fig-alt="The fish condition rubric" width=75%}
 
 ```{r}
 sd_nav(show_previous = TRUE)
 ```
 
---- fisheries_page 
+--- commercial_page 
 
 ### Commercial Fishery Characterization
 Answer the following questions and move the slider to select the factor score based on the rubric underneath:</br>
@@ -142,12 +162,18 @@ Answer the following questions and move the slider to select the factor score ba
 sd_question(
   type = "slider_numeric",
   id = "commercial",
-  label = "Commercial Fishery Characterization",
+  label = "",
   option = seq(-4,4,2)
 )
 ```
 
-![](images/commercial-rubric.png){fig-alt="The commercial fishery characterization rubric" width=25%}
+![](images/commercial-rubric.png){fig-alt="The commercial fishery characterization rubric" width=75%}
+
+```{r}
+sd_nav(show_previous = TRUE)
+```
+
+--- recreational_page
 
 ### Recreational Fishery Characterization
 Answer the following questions and move the slider to select the factor score based on the rubric underneath:</br>
@@ -165,7 +191,7 @@ sd_question(
 )
 ```
 
-![](images/recreational-rubric.png){fig-alt="The recreational fishery characterization rubric" width=25%}
+![](images/recreational-rubric.png){fig-alt="The recreational fishery characterization rubric" width=75%}
 
 ```{r}
 sd_nav(show_previous = TRUE)
