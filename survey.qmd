@@ -248,7 +248,7 @@ sd_question(
   type = "slider_numeric",
   id = "commercial",
   label = "",
-  option = seq(-4,4,2)
+  option = seq(-4, 0, 1)
 )
 
 sd_question(
@@ -280,7 +280,7 @@ sd_question(
   type = "slider_numeric",
   id = "recreational",
   label = "",
-  option = seq(-4,4,2)
+  option = seq(-4, 0, 1)
 )
 
 sd_question(
