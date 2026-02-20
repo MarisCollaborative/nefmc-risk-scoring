@@ -46,8 +46,27 @@ all-questions-required: false
 ---
 
 ```{r}
+#| include: false
 library(surveydown)
 library(tidyverse)
+library(nefishr)
+
+# load the nefmc species dataframe
+nefmc_species <- nefishr::nefmc_species
+# identify the individual skate species
+skates <- str_subset(nefmc_species$STOCK_NAME, "skate") |> 
+  unique()
+# identify the mixed species
+mix_spp <- str_subset(nefmc_species$STOCK_NAME, "[:punct:]") |> 
+  unique() 
+# remove the mixed species and the individual skate species from the dataframe
+species <- nefmc_species |> 
+  filter(!STOCK_NAME %in% c(mix_spp, skates)) |> 
+  select(STOCK_NAME) |> 
+  unique() |> 
+  arrange(STOCK_NAME)
+# create a list of the unique stock names to use as choices within the stock question
+species_choices <- unique(species$STOCK_NAME)
 ```
 
 :::{.sd_page id=welcome}
@@ -67,7 +86,11 @@ sd_question(
 ```
 
 ```{r stock}
-sd_question("stock")
+sd_question(
+  type = "select",
+  id = "stock",
+  label = "What stock are scoring?", 
+  options = species_choices)
 ```
 
 :::
@@ -83,6 +106,12 @@ sd_question(
   label = " ",
   option = seq(-4,4,2)
 )
+
+sd_question(
+  type = "textarea",
+  id = "biomass-rationale",
+  label = "Provide additional rationale as needed.",
+  height = "50px")
 
 ```
 
@@ -105,6 +134,12 @@ sd_question(
   label = "",
   option = seq(-4,4,2)
 )
+
+sd_question(
+  type = "textarea",
+  id = "recruitment-rationale",
+  label = "Provide additional rationale as needed.",
+  height = "50px")
 ```
 
 ![](images/recruitment-rubric.png){fig-alt="The recruitment rubric" width=75% fig-align="center"}
@@ -127,6 +162,12 @@ sd_question(
   label = "",
   option = seq(0,4,1)
 )
+
+sd_question(
+  type = "textarea",
+  id = "assessment-rationale",
+  label = "Provide additional rationale as needed.",
+  height = "50px")
 ```
 
 ![](images/assessment-rubric.png){fig-alt="The assessment uncertainty rubric" width=75% fig-align="center"}
@@ -149,6 +190,12 @@ sd_question(
   label = "",
   option = seq(0,4,1)
 )
+
+sd_question(
+  type = "textarea",
+  id = "climate-rationale",
+  label = "Provide additional rationale as needed.",
+  height = "50px")
 ```
 
 ![](images/climate-rubric.png){fig-alt="The climate vulnerability rubric" width=75% fig-align="center"}
@@ -159,7 +206,7 @@ sd_nav(show_previous = TRUE)
 
 :::
 
-:::{.sd_page id=fish_condition_pg}
+<!-- :::{.sd_page id=fish_condition_pg}
 
 ### Fish Condition
 Move the slider to select the factor score based on the rubric underneath.
@@ -179,7 +226,7 @@ sd_question(
 sd_nav(show_previous = TRUE)
 ```
 
-:::
+::: -->
 
 :::{.sd_page id=commercial_pg}
 
@@ -203,6 +250,12 @@ sd_question(
   label = "",
   option = seq(-4,4,2)
 )
+
+sd_question(
+  type = "textarea",
+  id = "comm-fish-rationale",
+  label = "Provide additional rationale as needed.",
+  height = "50px")
 ```
 
 ![](images/commercial-rubric.png){fig-alt="The commercial fishery characterization rubric" width=75% fig-align="center"}
@@ -229,6 +282,12 @@ sd_question(
   label = "",
   option = seq(-4,4,2)
 )
+
+sd_question(
+  type = "textarea",
+  id = "rec-fish-rationale",
+  label = "Provide additional rationale as needed.",
+  height = "50px")
 ```
 
 ![](images/recreational-rubric.png){fig-alt="The recreational fishery characterization rubric" width=75% fig-align="center"}
@@ -246,7 +305,10 @@ sd_nav(show_previous = TRUE)
 This is the last page in the survey.
 
 ```{r}
-sd_close()
+sd_close(label_close = "Exit survey", 
+         show_restart = T, 
+         label_restart = "Complete another survey", 
+         show_previous = T)
 ```
 
 :::

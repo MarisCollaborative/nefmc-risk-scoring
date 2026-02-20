@@ -1,34 +1,34 @@
-stock:
-  type: select
-  label: What stock are you reporting on?
-  options:
-    Acadian redfish: redfish
-    American plaice: plaice
-    Eastern Gulf of Maine cod: egom_cod
-    Georges Bank cod: gb_cod
-    Gulf of Maine cod: gom_cod
-    Southern New England cod: sne_cod
-    Western Gulf of Maine cod: wgom_cod
-    Atlantic halibut: halibut
-    Atlantic herring: herring
-    Atlantic sea scallop: scallop
-    Atlantic wolffish: wolffish
-    Haddock: haddock
-    Northern Monkfish: north_monkfish
-    Southern Monkfish: south_monkfish
-    Ocean pout: ocean_pout
-    Pollock: pollock
-    Red hake: red_hake
-    Silver hake: silver_hake
-    Skate complex: skates
-    Spiny dogfish: spiny_dogfish
-    White hake: white_hake
-    Northern windowpane flounder: north_windowpane_fl
-    Southern windowpane flounder: south_windowpane_fl
-    Georges Bank winter flounder: gb_winter_fl
-    Gulf of Maine winter flounder: gom_winter_fl
-    Southern New England / Mid_Atlantic winter flounder: sne_ma_winter_fl
-    Witch flounder: witch_flounder
-    Georges Bank yellowtail flounder: gb_yellowtail_fl
-    Gulf of Maine / Cape cod yellowtail flounder: gom_cc_yellowtail_fl
-    Southern New England / Mid_Atlantic yellowtail flounder: sne_ma_yellowtail_fl
+# stock:
+#   type: select
+#   label: What stock are you reporting on?
+#   options:
+#     Acadian redfish: redfish
+#     American plaice: plaice
+#     Eastern Gulf of Maine cod: egom_cod
+#     Georges Bank cod: gb_cod
+#     Gulf of Maine cod: gom_cod
+#     Southern New England cod: sne_cod
+#     Western Gulf of Maine cod: wgom_cod
+#     Atlantic halibut: halibut
+#     Atlantic herring: herring
+#     Atlantic sea scallop: scallop
+#     Atlantic wolffish: wolffish
+#     Haddock: haddock
+#     Northern Monkfish: north_monkfish
+#     Southern Monkfish: south_monkfish
+#     Ocean pout: ocean_pout
+#     Pollock: pollock
+#     Red hake: red_hake
+#     Silver hake: silver_hake
+#     Skate complex: skates
+#     Spiny dogfish: spiny_dogfish
+#     White hake: white_hake
+#     Northern windowpane flounder: north_windowpane_fl
+#     Southern windowpane flounder: south_windowpane_fl
+#     Georges Bank winter flounder: gb_winter_fl
+#     Gulf of Maine winter flounder: gom_winter_fl
+#     Southern New England / Mid_Atlantic winter flounder: sne_ma_winter_fl
+#     Witch flounder: witch_flounder
+#     Georges Bank yellowtail flounder: gb_yellowtail_fl
+#     Gulf of Maine / Cape cod yellowtail flounder: gom_cc_yellowtail_fl
+#     Southern New England / Mid_Atlantic yellowtail flounder: sne_ma_yellowtail_fl
