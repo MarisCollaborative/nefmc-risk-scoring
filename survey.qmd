@@ -150,7 +150,7 @@ sd_nav(show_previous = TRUE)
 
 :::
 
-:::{.sd_page id=assessment_pg}
+<!-- :::{.sd_page id=assessment_pg}
 
 ### Assessment Uncertainty 
 Move the slider to select the factor score based on the rubric underneath.
@@ -176,7 +176,7 @@ sd_question(
 sd_nav(show_previous = TRUE)
 ```
 
-:::
+::: -->
 
 :::{.sd_page id=climate_pg}
 
